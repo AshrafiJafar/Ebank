@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Transactions\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Framework\Framework.Core\Framework.Core.csproj" />
+    <ProjectReference Include="..\Ebank.AccountContext.ApplicationService.Contracts\Ebank.AccountContext.ApplicationService.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
