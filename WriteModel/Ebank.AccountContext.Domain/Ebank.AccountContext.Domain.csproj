@@ -11,7 +11,6 @@
 
   <ItemGroup>
     <Folder Include="Accounts\Exceptions\" />
-    <Folder Include="Transactions\Exceptions\" />
   </ItemGroup>
 
 </Project>

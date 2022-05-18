@@ -12,10 +12,11 @@ namespace Ebank.AccountContext.Domain.Accounts
         public CurrencyCode CurrencyCode { get; set; }
         public string OwnerName { get; set; } = null!;
         public AccountType AccountType { get; set; }
+        public ICollection<Transaction> Transactions { get; set; }
 
         public IEnumerable<Expression<Func<Account, object>>> GetAggregateExpressions()
         {
-            yield return null;
+            yield return x => x.Transactions;
         }
     }
 }

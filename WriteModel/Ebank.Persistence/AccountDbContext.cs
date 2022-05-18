@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Ebank.Persistence
 {
-    public class AccountDbContext : DbContextBase
+    public class AccountDbContext : AccountContext
     {
         public AccountDbContext(DbContextOptions dbContextOptions) : base(dbContextOptions)
         {
