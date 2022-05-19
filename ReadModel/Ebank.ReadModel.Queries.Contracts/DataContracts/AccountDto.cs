@@ -1,15 +1,16 @@
 ﻿using Ebank.Constants;
+using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace Ebank.Data.Models
+namespace Ebank.ReadModel.Queries.Contracts.DataContracts
 {
-    public class Account
+    public class AccountDto
     {
-        public Account() { }
         public int AccountNumber { get; set; }
         public CurrencyCode CurrencyCode { get; set; }
         public string OwnerName { get; set; } = null!;
         public AccountType AccountType { get; set; }
-        public ICollection<Transaction> Transactions { get; set; }
-
+        public ICollection<TransactionDto> Transactions { get; set; }
     }
 }

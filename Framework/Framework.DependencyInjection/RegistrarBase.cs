@@ -37,7 +37,7 @@ namespace Framework.DependencyInjection
 
         private void RegisterPersistence(IServiceCollection services)
         {
-            services.AddDbContext<IDbContext, AccountDbContext>(options =>
+            services.AddDbContext<IDbContext, EbankDbContext>(options =>
             {
                 options.UseInMemoryDatabase("Account");
             });

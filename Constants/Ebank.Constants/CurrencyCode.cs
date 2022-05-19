@@ -1,4 +1,4 @@
-﻿namespace Ebank.Data.Models
+﻿namespace Ebank.Constants
 {
     public enum CurrencyCode
     {

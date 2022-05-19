@@ -1,16 +1,17 @@
 ﻿using Ebank.Constants;
-using Framework.Core.Domain;
-using Framework.Domain;
 using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace Ebank.AccountContext.Domain.Accounts
+namespace Ebank.ReadModel.Queries.Contracts.DataContracts
 {
-    public class Transaction : EntityBase<Transaction>, IEntityBase
+    public class TransactionDto
     {
+        public long Id { get; set; }
         public int AccountNumber { get; set; }
         public decimal Amount { get; set; }
         public TransactionType TransactionType { get; set; }
         public DateTime CreatedAt { get; set; }
-
+        public AccountDto Account { get; set; }
     }
 }

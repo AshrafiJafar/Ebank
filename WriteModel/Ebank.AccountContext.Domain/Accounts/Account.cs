@@ -1,4 +1,5 @@
-﻿using Framework.Core.Domain;
+﻿using Ebank.Constants;
+using Framework.Core.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;

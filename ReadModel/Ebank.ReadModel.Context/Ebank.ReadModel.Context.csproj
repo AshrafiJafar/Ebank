@@ -8,8 +8,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Data\Ebank.Data\Ebank.Data.csproj" />
-    <ProjectReference Include="..\..\Framework\Framework.Persistence\Framework.Persistence.csproj" />
-    <ProjectReference Include="..\Ebank.AccountContext.Domain\Ebank.AccountContext.Domain.csproj" />
   </ItemGroup>
 
 </Project>

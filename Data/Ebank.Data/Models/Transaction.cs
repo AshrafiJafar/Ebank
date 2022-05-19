@@ -1,4 +1,6 @@
-﻿namespace Ebank.Data.Models
+﻿using Ebank.Constants;
+
+namespace Ebank.Data.Models
 {
     public class Transaction
     {

@@ -1,4 +1,5 @@
 ﻿using Framework.Core.Domain;
+using Framework.Core.Mapper;
 using Framework.Core.Persistence;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -10,11 +11,13 @@ namespace Framework.Persistence
         where TAggregateRoot : class, IAggregateRoot<TAggregateRoot>, IEntityBase, new()
     {
         protected readonly DbContextBase DbContext;
+        public IMapper Mapper { get; }
 
 
-        protected RepositoryBase(IDbContext dbContext)
+        protected RepositoryBase(IDbContext dbContext, IMapper mapper)
         {
             DbContext = (DbContextBase)dbContext;
+            Mapper = mapper;
         }
 
 

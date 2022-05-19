@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Data\Ebank.Data\Ebank.Data.csproj" />
     <ProjectReference Include="..\..\Framework\Framework.AssemblyHelper\Framework.AssemblyHelper.csproj" />
     <ProjectReference Include="..\..\Framework\Framework.Persistence\Framework.Persistence.csproj" />
   </ItemGroup>

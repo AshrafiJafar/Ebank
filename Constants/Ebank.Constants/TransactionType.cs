@@ -1,4 +1,4 @@
-﻿namespace Ebank.AccountContext.Domain.Accounts
+﻿namespace Ebank.Constants
 {
     public enum TransactionType
     {
