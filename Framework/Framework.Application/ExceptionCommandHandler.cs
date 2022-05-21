@@ -18,11 +18,8 @@ namespace Framework.Application
 
         public void Execute(TCommand command)
         {
-           // var logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
-
             try
             {
-            //    logger.Debug("init main " + command.GetType());
                 commandHandler.Execute(command);
             }
             catch (AggregateException ex)
@@ -32,23 +29,14 @@ namespace Framework.Application
              
                     throw ex.Flatten().InnerException;
                 }
-
-                /*if (ex.InnerExceptions.Count >= 1)
-                {
-                    var joined = string.Join(' ', ex.InnerExceptions.Select(z => z.Message).ToList());
-                    throw new Exception(ex.Message+joined);
-                }*/
-            //    logger.Error(ex, ex.Message);
                 throw ex;
             }
             catch (Exception ex)
             {
-            //    logger.Error(ex, ex.Message);
                 throw;
             }
             finally
             {
-                //NLog.LogManager.Shutdown();
             }
         }
     }

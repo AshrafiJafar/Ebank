@@ -7,5 +7,6 @@ namespace Ebank.AccountContext.Domain.Accounts.Services
 {
     public interface IAccountRepository : IRepository<Account>
     {
+        void CreateAccount(Account account);
     }
 }

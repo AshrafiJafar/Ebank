@@ -1,12 +1,16 @@
 ﻿using Ebank.Persistence;
+using Ebank.ReadModel.Context;
 using Framework.Application;
 using Framework.Core.Application;
 using Framework.Core.DependencyInjection;
 using Framework.Core.Domain;
+using Framework.Core.Mapper;
 using Framework.Core.Persistence;
 using Framework.Facade;
+using Framework.Mapper;
 using Framework.Persistence;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Framework.DependencyInjection
@@ -14,7 +18,7 @@ namespace Framework.DependencyInjection
     public abstract class RegistrarBase<TRegister> : IRegistrar
     {
         private readonly AssemblyHelper.AssemblyHelper assemblyHelper;
-
+        private static readonly InMemoryDatabaseRoot InMemoryDatabaseRoot = new InMemoryDatabaseRoot();
 
         protected RegistrarBase()
         {
@@ -37,9 +41,15 @@ namespace Framework.DependencyInjection
 
         private void RegisterPersistence(IServiceCollection services)
         {
-            services.AddDbContext<IDbContext, EbankDbContext>(options =>
+            
+        services.AddDbContext<IDbContext, EbankDbContext>(options =>
             {
-                options.UseInMemoryDatabase("Account");
+                options.UseInMemoryDatabase("Account", InMemoryDatabaseRoot);
+            });
+
+            services.AddDbContext<EbankContext>(options =>
+            {
+                options.UseInMemoryDatabase("Account", InMemoryDatabaseRoot);
             });
         }
 
@@ -49,6 +59,8 @@ namespace Framework.DependencyInjection
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IDiContainer, DiContainer>();
             services.AddScoped<ICommandBus, CommandBus>();
+            services.AddSingleton<IMapper, Mapper.Mapper>();
+           
         }
 
 

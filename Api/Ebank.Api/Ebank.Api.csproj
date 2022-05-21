@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Framework\Framework.AssemblyHelper\Framework.AssemblyHelper.csproj" />
     <ProjectReference Include="..\..\Framework\Framework.DependencyInjection\Framework.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\ReadModel\Ebank.ReadModel.Configuration\Ebank.ReadModel.Configuration.csproj" />
     <ProjectReference Include="..\..\WriteModel\Ebank.AccountContext.Configuration\Ebank.AccountContext.Configuration.csproj" />
   </ItemGroup>
 

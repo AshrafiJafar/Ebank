@@ -5,7 +5,7 @@ namespace Ebank.Persistence
 {
     public class EbankDbContext : EbDbContext
     {
-        public EbankDbContext(DbContextOptions dbContextOptions) : base(dbContextOptions)
+        public EbankDbContext(DbContextOptions<EbankDbContext> dbContextOptions) : base(dbContextOptions)
         {
         }
 

@@ -12,10 +12,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\ReadModel\Ebank.ReadModel.Context\Ebank.ReadModel.Context.csproj" />
     <ProjectReference Include="..\..\WriteModel\Ebank.Persistence\Ebank.Persistence.csproj" />
     <ProjectReference Include="..\Framework.Application\Framework.Application.csproj" />
     <ProjectReference Include="..\Framework.AssemblyHelper\Framework.AssemblyHelper.csproj" />
     <ProjectReference Include="..\Framework.Facade\Framework.Facade.csproj" />
+    <ProjectReference Include="..\Framework.Mapper\Framework.Mapper.csproj" />
   </ItemGroup>
 
 </Project>

@@ -12,6 +12,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Framework\Framework.Core\Framework.Core.csproj" />
     <ProjectReference Include="..\Ebank.AccountContext.ApplicationService.Contracts\Ebank.AccountContext.ApplicationService.Contracts.csproj" />
+    <ProjectReference Include="..\Ebank.AccountContext.Domain\Ebank.AccountContext.Domain.csproj" />
   </ItemGroup>
 
 </Project>

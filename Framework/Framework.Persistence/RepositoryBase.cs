@@ -10,13 +10,13 @@ namespace Framework.Persistence
     public class RepositoryBase<TAggregateRoot>
         where TAggregateRoot : class, IAggregateRoot<TAggregateRoot>, IEntityBase, new()
     {
-        protected readonly DbContextBase DbContext;
+        protected readonly DbContext DbContext;
         public IMapper Mapper { get; }
 
 
         protected RepositoryBase(IDbContext dbContext, IMapper mapper)
         {
-            DbContext = (DbContextBase)dbContext;
+            DbContext = (DbContext)dbContext;
             Mapper = mapper;
         }
 
