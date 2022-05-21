@@ -41,8 +41,8 @@ namespace Framework.DependencyInjection
 
         private void RegisterPersistence(IServiceCollection services)
         {
-            
-        services.AddDbContext<IDbContext, EbankDbContext>(options =>
+
+            services.AddDbContext<IDbContext, EbankDbContext>(options =>
             {
                 options.UseInMemoryDatabase("Account", InMemoryDatabaseRoot);
             });
@@ -50,6 +50,7 @@ namespace Framework.DependencyInjection
             services.AddDbContext<EbankContext>(options =>
             {
                 options.UseInMemoryDatabase("Account", InMemoryDatabaseRoot);
+                options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
             });
         }
 
@@ -60,7 +61,7 @@ namespace Framework.DependencyInjection
             services.AddScoped<IDiContainer, DiContainer>();
             services.AddScoped<ICommandBus, CommandBus>();
             services.AddSingleton<IMapper, Mapper.Mapper>();
-           
+
         }
 
 
@@ -87,9 +88,6 @@ namespace Framework.DependencyInjection
                 services.AddTransient(baseInterface, service);
             }
         }
-
-
-
 
 
         private void RegisterCommandHandlers(IServiceCollection services)
