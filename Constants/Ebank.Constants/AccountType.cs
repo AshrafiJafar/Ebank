@@ -2,7 +2,7 @@
 {
     public enum AccountType
     {
-        Individual,
-        Corporate
+        Individual = 1,
+        Corporate = 2
     }
 }

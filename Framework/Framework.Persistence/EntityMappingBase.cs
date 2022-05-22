@@ -19,7 +19,7 @@ namespace Framework.Persistence
             if (a.BaseType != null && a.BaseType.Name == baseClassName && a.IsClass)
             {
                 builder.Property("Id")
-                    .HasColumnType(nameof(SqlDbType.UniqueIdentifier));
+                    .HasColumnType(nameof(SqlDbType.BigInt));
 
                 builder.HasKey("Id");
             }

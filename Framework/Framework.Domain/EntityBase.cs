@@ -10,16 +10,8 @@ namespace Framework.Domain
         {
         }
 
-        public Guid Id { get; set; }
+        public long Id { get; set; }
 
-        protected void SetId()
-        {
-            Id = Guid.NewGuid();
-        }
-
-        protected void SetId(Guid id)
-        {
-            Id = id;
-        }
+        
     }
 }

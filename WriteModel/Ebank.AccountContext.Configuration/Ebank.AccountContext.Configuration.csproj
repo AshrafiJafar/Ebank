@@ -10,6 +10,7 @@
     <ProjectReference Include="..\..\Framework\Framework.DependencyInjection\Framework.DependencyInjection.csproj" />
     <ProjectReference Include="..\Ebank.AccountContext.ApplicationService.Contracts\Ebank.AccountContext.ApplicationService.Contracts.csproj" />
     <ProjectReference Include="..\Ebank.AccountContext.ApplicationService\Ebank.AccountContext.ApplicationService.csproj" />
+    <ProjectReference Include="..\Ebank.AccountContext.Domain.Services\Ebank.AccountContext.Domain.Services.csproj" />
     <ProjectReference Include="..\Ebank.AccountContext.Domain\Ebank.AccountContext.Domain.csproj" />
     <ProjectReference Include="..\Ebank.AccountContext.Facade.Contracts\Ebank.AccountContext.Facade.Contracts.csproj" />
     <ProjectReference Include="..\Ebank.AccountContext.Facade\Ebank.AccountContext.Facade.csproj" />

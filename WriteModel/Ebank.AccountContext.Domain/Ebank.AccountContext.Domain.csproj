@@ -8,10 +8,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Constants\Ebank.Constants\Ebank.Constants.csproj" />
     <ProjectReference Include="..\..\Framework\Framework.Domain\Framework.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Accounts\Exceptions\" />
+    <ProjectReference Include="..\Ebank.AccountContext.Resource\Ebank.AccountContext.Resource.csproj" />
   </ItemGroup>
 
 </Project>

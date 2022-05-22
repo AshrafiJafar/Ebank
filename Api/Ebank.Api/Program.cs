@@ -3,6 +3,7 @@ using Framework.DependencyInjection;
 using Framework.Facade;
 using Newtonsoft.Json;
 using System.Text.Json.Serialization;
+using Ebank.Api.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,11 +31,8 @@ AddControllers(assemblyHelper, mvcBuilder);
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseDeveloperExceptionPage();
-}
+app.UseMiddleware<ErrorHandlerMiddleware>();
+
 app.UseSwagger();
 app.UseSwaggerUI();
 app.UseAuthorization();
